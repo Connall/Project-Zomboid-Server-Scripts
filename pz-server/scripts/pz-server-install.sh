@@ -44,3 +44,4 @@ echo "Running installation."
 bash wheezy-glibc-sid.sh
 
 echo "=====SERVER INSTALLED====="
+echo "Check console for any errors that may have occured."
