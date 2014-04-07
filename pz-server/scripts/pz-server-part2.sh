@@ -8,13 +8,6 @@ wget http://192.223.24.135/pz-server/scripts/pz-server-update.sh
 echo "Successful switch user."
 echo "Making steamcmd directory."
 mkdir steamcmd
-echo "Checking server architecture..."
-if (uname -m | grep -q 'x86_64'); then
-	echo "Adjusting to 64 bit architecture..."
-	dpkg --add-architecture i386
-	apt-get update
-	apt-get install lib32gcc1
-fi
 echo "Switching over directories."
 cd /home/pz-server/steamcmd
 echo "Starting steamcmd download."

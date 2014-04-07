@@ -39,6 +39,14 @@ fi
 echo "Switching to pz-server user please wait...."
 su - pz-server -c 'wget http://192.223.24.135/pz-server/scripts/pz-server-part2.sh;bash pz-server-part2.sh;'
 
+echo "Checking server architecture..."
+if (uname -m | grep -q 'x86_64'); then
+	echo "Adjusting to 64 bit architecture..."
+	dpkg --add-architecture i386
+	apt-get update
+	apt-get install lib32gcc1
+fi
+
 echo "Getting glibc libraries."
 wget http://kirrus.co.uk/stuff/pz/wheezy-glibc-sid.sh
 echo "Running installation."
