@@ -19,13 +19,26 @@ echo "=====WELCOME TO PROJECT ZOMBOID SERVER INSTALL SCRIPT====="
 echo "=====Script Created by: Connall Lindsay====="
 echo "Press Enter to start."
 read
-echo "Installing Java"
-apt-get -y install default-jdk
-echo "Java Installed."
-echo "Installing screen."
-apt-get -y install screen
-echo "screen installed."
-echo "Checking for steam user..."
+echo "Checking Java pacakge."
+
+if hash default-jdk 2>/dev/null;
+then
+	echo "Java is already installed."
+else
+	echo "Java is not installed. Installing..."
+	apt-get -y install default-jdk
+	echo "Java installed."
+fi
+echo "Checking screen package."
+
+if hash screen 2>/dev/null;
+then
+	echo "Screen is already installed."
+else	
+	echo "Screen is not installed. Installing..."
+	apt-get -y install screen
+fi
+echo "Checking for pz-server user..."
 
 if id pz-server > /dev/null 2>&1
 then
@@ -37,7 +50,7 @@ fi
 
 
 echo "Switching to pz-server user please wait...."
-su - pz-server -c 'wget http://192.223.24.135/pz-server/scripts/pz-server-part2.sh;bash pz-server-part2.sh;'
+su - pz-server -c 'wget http://www.terminal-control.com/pz-server/scripts/pz-server-part2.sh;bash pz-server-part2.sh;'
 
 echo "Checking server architecture..."
 if (uname -m | grep -q 'x86_64'); then
@@ -51,6 +64,7 @@ echo "Getting glibc libraries."
 wget http://kirrus.co.uk/stuff/pz/wheezy-glibc-sid.sh
 echo "Running installation."
 bash wheezy-glibc-sid.sh
+rm wheezy-glibc-sid.sh
 
 echo "=====SERVER INSTALLED====="
 echo "Check console for any errors that may have occured."

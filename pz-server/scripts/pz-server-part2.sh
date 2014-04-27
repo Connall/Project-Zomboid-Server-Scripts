@@ -3,8 +3,8 @@
 #Make sure script is run on debian wheezy
 #Script created by Connall Lindsay, Assistance by Kirrus.
 echo "Downloading other packages..."
-wget http://192.223.24.135/pz-server/scripts/pz-server-start.sh
-wget http://192.223.24.135/pz-server/scripts/pz-server-update.sh
+wget http://www.terminal-control.com/pz-server/scripts/pz-server-start.sh
+wget http://www.terminal-control.com/pz-server/scripts/pz-server-update.sh
 echo "Successful switch user."
 echo "Making steamcmd directory."
 mkdir steamcmd
