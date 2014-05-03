@@ -1,10 +1,11 @@
 #!/bin/bash
-#Scripts are licensed under Attribution-NonCommercial 4.0 International. Commercial permission must be seeked by original author.
+#Scripts are licensed under Attribution-NonCommercial 4.0 International. Commercial permission must be saught by original author.
 #Make sure script is run on debian wheezy
 #Script created by Connall Lindsay, Assistance by Kirrus.
 echo "Downloading other packages..."
 wget http://www.terminal-control.com/pz-server/scripts/pz-server-start.sh
 wget http://www.terminal-control.com/pz-server/scripts/pz-server-update.sh
+wget http://www.terminal-control.com/pz-server/scripts/pz-server-backup.sh
 echo "Successful switch user."
 echo "Making steamcmd directory."
 mkdir steamcmd
