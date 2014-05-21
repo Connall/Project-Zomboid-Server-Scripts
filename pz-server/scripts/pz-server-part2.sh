@@ -23,7 +23,7 @@ read steamUsername
 echo "Password (Text entered will not be visible:"
 read -s steamPassword
 echo "Running installation"
-./steamcmd.sh +login $steamUsername $steamPassword "+app_update 108600 -beta iwillbackupmysave -betapassword iaccepttheconsequences" validate +exit
+./steamcmd.sh +login $steamUsername $steamPassword +app_update 108600 validate +exit
 echo "Installation finished."
 
 echo "Switching back to root..."

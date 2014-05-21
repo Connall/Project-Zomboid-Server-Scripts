@@ -26,6 +26,6 @@ read steamUsername
 echo "Password (Text is hidden when typing.):"
 read -s steamPassword
 echo "Running update..."
-./steamcmd.sh +login $steamUsername $steamPassword "+app_update 108600 -beta iwillbackupmysave -betapassword iaccepttheconsequences" validate +exit
+./steamcmd.sh +login $steamUsername $steamPassword +app_update 108600 validate +exit
 echo $steamBranch
 echo "Update Complete. Check console for any errors that may have occured."
