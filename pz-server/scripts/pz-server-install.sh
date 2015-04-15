@@ -34,7 +34,7 @@ echo "Checking screen package."
 if hash screen 2>/dev/null;
 then
 	echo "Screen is already installed."
-else	
+else
 	echo "Screen is not installed. Installing..."
 	apt-get -y install screen
 fi
@@ -50,7 +50,7 @@ fi
 
 
 echo "Switching to pz-server user please wait...."
-su - pz-server -c 'wget http://www.terminal-control.com/pz-server/scripts/pz-server-part2.sh;bash pz-server-part2.sh;'
+su - pz-server -c 'wget https://raw.githubusercontent.com/Connall/Project-Zomboid-Server-Scripts/master/pz-server/scripts/pz-server-part2.sh;bash pz-server-part2.sh;'
 
 echo "Checking server architecture..."
 if (uname -m | grep -q 'x86_64'); then
