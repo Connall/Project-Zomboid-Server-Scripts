@@ -61,7 +61,7 @@ if (uname -m | grep -q 'x86_64'); then
 fi
 
 echo "Getting glibc libraries."
-wget http://kirrus.co.uk/stuff/pz/wheezy-glibc-sid.sh
+wget https://raw.githubusercontent.com/Connall/Project-Zomboid-Server-Scripts/master/pz-server/scripts/wheezy-glibc-sid.sh
 echo "Running installation."
 bash wheezy-glibc-sid.sh
 rm wheezy-glibc-sid.sh
