@@ -3,9 +3,9 @@
 #Make sure script is run on debian wheezy
 #Script created by Connall Lindsay, Assistance by Kirrus.
 echo "Downloading other packages..."
-wget http://www.terminal-control.com/pz-server/scripts/pz-server-start.sh
-wget http://www.terminal-control.com/pz-server/scripts/pz-server-update.sh
-wget http://www.terminal-control.com/pz-server/scripts/pz-server-backup.sh
+wget https://raw.githubusercontent.com/Connall/Project-Zomboid-Server-Scripts/master/pz-server/scripts/pz-server-start.sh
+wget https://raw.githubusercontent.com/Connall/Project-Zomboid-Server-Scripts/master/pz-server/scripts/pz-server-update.sh
+wget https://raw.githubusercontent.com/Connall/Project-Zomboid-Server-Scripts/master/pz-server/scripts/pz-server-backup.sh
 echo "Successful switch user."
 echo "Making steamcmd directory."
 mkdir steamcmd
